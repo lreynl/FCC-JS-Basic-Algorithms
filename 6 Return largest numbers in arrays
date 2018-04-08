@@ -1,0 +1,20 @@
+//6. Return largest numbers in arrays
+//Accepts 2d array and returns another
+//array made of the biggest numbers
+//in each sub array.
+function largestOfFour(arr) {
+  var len = arr.length;
+  var lenInner = 0;
+  var arrOfBiggest = [];
+  var biggest;
+  for(var i = 0; i < len; i++) {
+    lenInner = arr[i].length;
+    biggest = arr[i][0];
+    for(var j = 0; j < lenInner; j++) {
+      //does one unnecessary copy to keep it simple
+      if(arr[i][j] > biggest) biggest = arr[i][j];
+    }
+    arrOfBiggest.push(biggest);
+  }
+  return arrOfBiggest;
+}
