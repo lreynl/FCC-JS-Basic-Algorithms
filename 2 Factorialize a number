@@ -1,0 +1,12 @@
+//2. Factorializes a number.
+//Might overflow if num is too big.
+function factorialize(num) {
+  if(num < 0) return 0;
+  if(num <= 1) return 1;
+  var factorial = num;
+  num--;
+  for(num; num > 1; num--) {
+    factorial *= num;
+  }
+  return factorial;
+}
