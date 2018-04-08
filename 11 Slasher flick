@@ -1,0 +1,7 @@
+//11. Slasher flick
+//Remove howMany number of elements
+//from beginning of array.
+function slasher(arr, howMany) {
+  for(howMany; howMany > 0; howMany--) arr.shift();
+  return arr;
+}
