@@ -1,0 +1,12 @@
+//3. Check for palindromes
+//Removes non-alphanumeric characters; makes everything lower case;
+//checks original against reversed.
+function palindrome(str) {
+  var remove = /[^a-z0-9]/g;
+  var isPalindrome = false;
+  str = str.toLowerCase().replace(remove, '');
+  if(str == str.split('').reverse().join('')) {
+    isPalindrome = true;
+  }
+  return isPalindrome;
+}
