@@ -1,0 +1,10 @@
+//8. Repeat a string
+//Concatenates a string 'num' times.
+function repeatStringNumTimes(str, num) {
+  if(num < 1) return "";
+  var repeat = "";
+  for(num; num > 0; num--) {
+    repeat += str;
+  }
+  return repeat;
+}
