@@ -1,0 +1,12 @@
+//12. Mutations
+//Test whether first word in array
+//contains every letter in the second.
+function mutation(arr) {
+  var first = arr[0].toLowerCase().split("");
+  var second = arr[1].toLowerCase().split("");
+  var hasAll = true;
+  second.forEach(function(letter) {
+    if(!first.includes(letter)) hasAll = false;
+  });
+  return hasAll;
+}

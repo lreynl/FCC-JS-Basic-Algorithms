@@ -1,0 +1,10 @@
+//13. Removes falsy elements from array
+//I did a much simpler solution after
+//going back to look at it.
+function bouncer(arr) {
+  arr = arr.filter(function(val) {
+    //return (val !== false && val !== null && val !== 0 && val !== "" && val !== undefined && (val === val));});
+    return (val);
+  });
+  return arr;
+}
