@@ -1,0 +1,18 @@
+//10. Chunky monkey
+//Split array arr into subarrays
+//with 'size' elements and return
+//that 2d array.
+function chunkArrayInGroups(arr, size) {
+  var len = arr.length;
+  var chunks = [];
+  var temp = [];
+  for(var i = 0, j = 1; i < len; i++, j++) {
+    temp.push(arr[i]);
+    if(j == size || i == len - 1) {
+      chunks.push(temp);
+      temp = [];
+      j = 0;
+    }
+  }
+  return chunks;
+}
