@@ -1,0 +1,13 @@
+//9. Truncate a string
+//If num is greater than 3, return
+//the returned string has length num
+//and ends in "...". If num is less
+//than or equal to 3, the returned
+//string has length num + 3 and ends
+//in "...".
+function truncateString(str, num) {
+  if(num <= 0) str = "...";
+  if(num <= 3 && num > 0) str = str.slice(0, num) + "...";
+  if(num > 3 && num < str.length) str = str.slice(0, num - 3) + "...";
+  return str;
+}
