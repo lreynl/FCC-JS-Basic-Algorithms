@@ -1,0 +1,9 @@
+//7 Confirm the ending
+function confirmEnding(str, target) {
+  var replace = /[^a-zA-Z]/g;
+  var endsWith = false;
+  str = str.replace(replace, '');
+  var ending = str.slice(str.length - target.length);
+  if(ending == target) endsWith = true;
+  return endsWith;
+}
