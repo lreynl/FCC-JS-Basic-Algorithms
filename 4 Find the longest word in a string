@@ -1,0 +1,10 @@
+//4. Splits sentence into array of
+//words then loops to find the longest.
+function findLongestWord(str) {
+  var words = str.split(' ');
+  var longest = 1;
+  for(var i = 0; i < words.length; ++i) {
+    if(words[i].length > longest) longest = words[i].length;
+  }
+  return longest;
+}
