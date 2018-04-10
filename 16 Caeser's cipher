@@ -1,0 +1,17 @@
+//16. Caeser's cipher decoder
+function rot13(encodedStr) {
+  var codeArr = encodedStr.split(""); // String to Array
+  var decodedArr = [];
+  var len = codeArr.length;
+  var str = "";
+  for(var i = 0; i < len; i++) {
+    var char = codeArr[i].charCodeAt();
+    if(char < 65 || char > 90) {
+      decodedArr.push(codeArr[i]);
+    } else {
+      str = String.fromCharCode((((char - 65) + 13) % 26) + 65);
+      decodedArr.push(str);
+     }
+  }
+  return decodedArr.join(""); // Array to String
+}
