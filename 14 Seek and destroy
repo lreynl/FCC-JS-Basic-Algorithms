@@ -2,16 +2,16 @@
 //Take an array and one or more numbers.
 //Remove all occurrances of each of those numbers.
 function destroyer(arr) {
-  // Remove all the values
-  var size = arguments.length;
-  arr = arguments[0];
-  var args = [];
-  for(var i = 1; i < size; i++) {
-    args.push(arguments[i]);
-  }
-  var argsLen = args.length;
-  for(i = 0; i < argsLen; i++) {
-    arr = arr.filter(function(val) { return val !== args[i]; });
-  }
-  return arr;
+  var args = [].slice.call(arguments); //copy arguments into real array
+  //Get the array of numbers, assuming it's the first element.
+  var numList = args.shift(); //only numbers to remove are left
+    args.forEach(function(num) {
+    for(var i = 0; i < numList.length; i++) {
+      if(num === numList[i]) {
+        numList.splice(i, 1);
+        i--; //compensate for deleted number
+      }
+    }
+  });
+  return numList;
 }
