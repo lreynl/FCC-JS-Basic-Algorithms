@@ -1,0 +1,10 @@
+//15. Where do I belong
+//Take random array and a number;
+//if array were sorted, at what index
+//would that nuber belong?
+function getIndexToIns(arr, num) {
+  var toss = arr.push(num); //add number to array
+  toss = arr.sort(function(a, b) { return a - b; }); //sort it
+  var ret = arr.indexOf(num); //get index of that number
+  return ret;
+}
