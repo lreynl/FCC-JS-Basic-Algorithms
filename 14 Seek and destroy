@@ -1,0 +1,17 @@
+//14. Seek and destroy
+//Take an array and one or more numbers.
+//Remove all occurrances of each of those numbers.
+function destroyer(arr) {
+  // Remove all the values
+  var size = arguments.length;
+  arr = arguments[0];
+  var args = [];
+  for(var i = 1; i < size; i++) {
+    args.push(arguments[i]);
+  }
+  var argsLen = args.length;
+  for(i = 0; i < argsLen; i++) {
+    arr = arr.filter(function(val) { return val !== args[i]; });
+  }
+  return arr;
+}
