@@ -1,6 +1,6 @@
 //16. Caeser's cipher decoder
 function rot13(encodedStr) {
-  var codeArr = encodedStr.split(""); // String to Array
+  var codeArr = encodedStr.split(""); //String to Array
   var decodedArr = [];
   var len = codeArr.length;
   var str = "";
@@ -13,5 +13,5 @@ function rot13(encodedStr) {
       decodedArr.push(str);
      }
   }
-  return decodedArr.join(""); // Array to String
+  return decodedArr.join(""); //Array to String
 }
